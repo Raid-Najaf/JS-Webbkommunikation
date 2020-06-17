@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+ 
+  <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="index.js"></script>
+</head>
+<body onload="create_unfinished_task(), create_finished_task()">
+
+    <div id="login_div" class="main-div">
+        <h3>Task creator</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+    
+        <button onclick="login()">Login to Account</button>
+    </div>
+    
+      <div id="user_div" class="loggedin-div">
+        <h3>Welcome to task creator </h3>
+        <p id="user_para"></p>
+        <button onclick="logout()">Logout</button>
+      </div>
+
+    <div id="content_container">
+        
+        <div id="finish_task_header">
+            <p>Create Task.</p>
+        </div>
+       
+        <div id="task_input_container">
+            <input id="input_box" type="text" placeholder="Start a task">
+            <input id="input_date" type="date">
+            <button id="input_button" onclick="add_task();">Enter Task <i class="fa fa-arrow-right"></i></button>
+        </div>
+         <!--Task to do-->
+        <p class="header">Task</p>
+        <div class="container">
+   
+        </div>
+        <!--Task finished-->
+        <p class="header">Finished</p>
+        <div class="container">
+           <div class="task_container">
+            <div id="task_data">
+                <p id="task_title" contenteditable="false">Task title 1</p>
+                <p id="task_date" contenteditable="false">Task date 1</p>
+            </div>
+           </div>
+           <div class="task_container">
+               <div id="task_data">
+                   <p id="task_title" contenteditable="false">Task title 1</p>
+                   <p id="task_date" contenteditable="false">Task date 1</p>
+               </div>
+              </div>
+              <div class="task_container">
+               <div id="task_data">
+                   <p id="task_title" contenteditable="false">Task title 1</p>
+                   <p id="task_date" contenteditable="false">Task date 1</p>
+               </div>
+              </div>
+        </div>
+    </div> 
+   </body>
+</html>
